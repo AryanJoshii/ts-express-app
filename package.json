@@ -1,0 +1,37 @@
+{
+  "name": "ts-express-app",
+  "version": "1.0.1",
+  "description": "Generates Express-Typescript boilerplate",
+  "main": "index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanJoshii/ts-express-app.git"
+  },
+  "engines": {
+    "node": ">= 16.7.0"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "ts",
+    "generator",
+    "boilerplates",
+    "node",
+    "nodejs",
+    "expressjs",
+    "ex",
+    "types",
+    "routes",
+    "express-ts",
+    "express-ts-generator",
+    "express-typescript-app",
+    "express-app-generator",
+    "gen"
+  ],
+  "author": "Firm Coder",
+  "license": "MIT"
+}
