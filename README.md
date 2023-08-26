@@ -1,16 +1,23 @@
+
 # TS-EXPRESS-APP
+
+![Logo](https://raw.githubusercontent.com/AryanJoshii/ts-express-app/main/ts-express-app.png)
+
+![npm](https://img.shields.io/npm/v/ts-express-app)
+![node-current](https://img.shields.io/node/v/ts-express-app)
+![npm](https://img.shields.io/npm/dt/ts-express-app)
 
 Generates basic express-typescript boilerplate.
 
-**NOTE**: Node version `>= 16.7.0` is requied to run this command. to check your node version run following command:
+**NOTE**: Node version `>= 16.7.0` is required to run this command. To check your node version run following command:
 
-```cmd
+```bash
 node -v | --version
 ```
 
 ## Usage:
 
-```cmd
+```bash
   npx ts-express-app [dir] [options]
 
   Options:
@@ -19,22 +26,31 @@ node -v | --version
 
 ## Example:
 
-```cmd
+```bash
   npx ts-express-app my-app --yarn
 ```
 ## Quick start
 
 Generate boilerplate in your project directory by running following command
 
-```cmd
+```bash
   npx ts-express-app project-name
 ```
+To generate boilerplate in current directory
 
-Or run following command to generate boilerplate in current directory
-
-```cmd
+```bash
   npx ts-express-app .
 ```
 
-Now give it sometime to generate.
+To start your application in development
+```bash
+npm run dev
+```
+To make your project build and run the build
+```bash
+npm run build && npm start
+```
     
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

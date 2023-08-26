@@ -6,7 +6,7 @@ const path = require('path');
 
 const TEMPLATE_FOLDER_PATH = './template';
 const DEPS = "express cookie-parser cors dotenv";
-const DEV_DEPS = "typescript ts-node @types/express @types/node";
+const DEV_DEPS = "typescript ts-node nodemon @types/express @types/node @types/cors @types/cookie-parser";
 const args = process.argv.slice(2);
 
 const color = {
@@ -76,9 +76,10 @@ function copyFilesToProjectDir() {
 
 function installModules() {
     try {
-        const withNpm = `npm i ${DEPS} && npm i -D ${DEV_DEPS}`;
-        const withYarn = `yarn add ${DEPS} && yarn add ${DEV_DEPS} -D`;
-        execSync(withYarnPackage ? withYarn : withNpm, { cwd: args[0], stdio: [0, 1, 2] })
+        const installDeps = withYarnPackage ? `yarn add ${DEPS}` : `npm i ${DEPS}`
+        const installDevDeps = withYarnPackage ? `yarn add ${DEV_DEPS} -D` : `npm i -D ${DEV_DEPS}`
+        execSync(installDeps, { cwd: args[0], stdio: [0, 1, 2] });
+        execSync(installDevDeps, { cwd: args[0], stdio: [0, 1, 2] });
     } catch (error) {
         throw error;
     }
